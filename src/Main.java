@@ -20,19 +20,24 @@ public class Main {
                     readDay();
                     readActivity();
                     dailyPlanner.addActivity(day, activity);
+                    break;
                 }
                 case 2: {
                     readDay();
                     readActivity();
                     dailyPlanner.removeActivity(day, activity);
+                    break;
                 }
                 case 3: {
                     readDay();
-                    dailyPlanner.getActivities(day);
+                    System.out.println(dailyPlanner.getActivities(day));
+                    break;
                 }
                 case 4:{
                     System.out.println(dailyPlanner.endPlanning().toString());
+                    break;
                 }
+                default:break;
             }
         }
         while (option > 0 && option < 4);
